@@ -7,3 +7,18 @@ This is a very simple driver that provides buffered raster printing and paper cu
 To compile this on a raspberry pi, you will first need to install two cups dev packages:
 sudo apt-get install libcups2-dev
 sudo apt-get install libcupsimage2-dev
+
+## Install script(or just paste to console)
+
+```
+#!/bin/sh
+# install Epson printer TM-88 / TM-20
+sudo apt install libcups2-dev libcupsimage2-dev
+sudo mkdir /tmp/install/
+cd /tmp/install/
+sudo wget https://codeload.github.com/utyfua/epsonsimplecups/zip/master
+sudo unzip master
+cd epsonsimplecups-master
+sudo make
+sudo make install
+```
